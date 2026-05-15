@@ -1,0 +1,24 @@
+*.csv
+**.png
+**.pyc
+**.pyo
+**.pt
+**.txt
+!**/requirements.txt
+
+.vscode/
+# env
+.env
+
+# history / junk
+.history/
+
+# local projects
+nasij_badro/
+telegram-bot/
+
+# Flutter generated files
+**/generated_plugin_registrant.*
+**/generated_plugins.cmake
+pubspec.lock
+nasji/backend/.env
