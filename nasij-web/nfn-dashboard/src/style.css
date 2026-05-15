@@ -1,0 +1,294 @@
+@import "tailwindcss";
+
+/* ============================================
+   NFN CONTROL TOWER — DESIGN SYSTEM
+   ============================================ */
+
+:root {
+  --bg-base: #0b0d10;
+  --bg-surface: #11151a;
+  --bg-raised: #171c22;
+  --bg-glass: rgba(17, 21, 26, 0.72);
+  --bg-glass-heavy: rgba(17, 21, 26, 0.9);
+
+  --border-subtle: rgba(148, 163, 184, 0.08);
+  --border-default: rgba(148, 163, 184, 0.13);
+  --border-strong: rgba(148, 163, 184, 0.2);
+  --border-focus: rgba(148, 163, 184, 0.42);
+
+  --text-primary: #edf2f7;
+  --text-secondary: #a7b0bd;
+  --text-muted: #727d8d;
+
+  --accent-emerald: #8fbda4;
+  --accent-emerald-muted: rgba(143, 189, 164, 0.1);
+  --accent-rose: #ef4444;
+  --accent-rose-muted: rgba(239, 68, 68, 0.12);
+  --accent-amber: #c7ad76;
+  --accent-amber-muted: rgba(199, 173, 118, 0.1);
+  --accent-blue: #9aa8b8;
+  --accent-blue-muted: rgba(154, 168, 184, 0.1);
+  --accent-purple: #a5a8b2;
+  --accent-purple-muted: rgba(165, 168, 178, 0.1);
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+}
+
+/* ---- LIGHT THEME ---- */
+[data-theme="light"] {
+  --bg-base: #f5f6f8;
+  --bg-surface: #ffffff;
+  --bg-raised: #eef0f4;
+  --bg-glass: rgba(255, 255, 255, 0.82);
+  --bg-glass-heavy: rgba(255, 255, 255, 0.95);
+
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-default: rgba(0, 0, 0, 0.10);
+  --border-strong: rgba(0, 0, 0, 0.18);
+  --border-focus: rgba(0, 0, 0, 0.30);
+
+  --text-primary: #1a1d23;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+
+  --accent-emerald: #16a34a;
+  --accent-emerald-muted: rgba(22, 163, 74, 0.08);
+  --accent-rose: #dc2626;
+  --accent-rose-muted: rgba(220, 38, 38, 0.08);
+  --accent-amber: #b45309;
+  --accent-amber-muted: rgba(180, 83, 9, 0.08);
+  --accent-blue: #2563eb;
+  --accent-blue-muted: rgba(37, 99, 235, 0.08);
+  --accent-purple: #7c3aed;
+  --accent-purple-muted: rgba(124, 58, 237, 0.08);
+}
+
+/* ---- RESET ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+body {
+  font-feature-settings: "tnum";
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ---- SCROLLBAR ---- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.12);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.22);
+}
+
+/* ---- PAGE ENTRANCE ---- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: fadeInUp 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ---- GLOW EFFECTS ---- */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(143, 189, 164, 0.18);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(143, 189, 164, 0);
+  }
+}
+
+@keyframes alertPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(239, 68, 68, 0);
+  }
+}
+
+.pulse-emerald {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.pulse-rose {
+  animation: alertPulse 1.6s ease-in-out infinite;
+}
+
+/* ---- LEAFLET MAP OVERRIDES ---- */
+.leaflet-container {
+  background: var(--bg-base) !important;
+  font-family: var(--font-body) !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: var(--bg-raised) !important;
+  border: 1px solid var(--border-default) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5) !important;
+  color: var(--text-primary) !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px 16px !important;
+  font-family: var(--font-body) !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  color: var(--text-primary) !important;
+}
+
+.leaflet-popup-tip {
+  background: var(--bg-raised) !important;
+  border: 1px solid var(--border-default) !important;
+  box-shadow: none !important;
+}
+
+.leaflet-popup-close-button {
+  color: var(--text-muted) !important;
+}
+.leaflet-popup-close-button:hover {
+  color: var(--text-primary) !important;
+}
+
+.leaflet-control-zoom a {
+  background: var(--bg-raised) !important;
+  border-color: var(--border-default) !important;
+  color: var(--text-secondary) !important;
+}
+.leaflet-control-zoom a:hover {
+  background: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(8, 12, 20, 0.8) !important;
+  color: var(--text-muted) !important;
+  font-size: 10px !important;
+}
+.leaflet-control-attribution a {
+  color: var(--text-muted) !important;
+}
+
+/* ---- MAP MARKERS ---- */
+.nfn-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  display: inline-block;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.nfn-truck {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  font-size: 13px;
+}
+
+/* ---- CARD HOVER ---- */
+.card-hover {
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-1px);
+  border-color: var(--border-strong);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ---- TOPOGRAPHIC NOISE ---- */
+.topo-bg {
+  position: relative;
+}
+.topo-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 42px 42px;
+  pointer-events: none;
+}
+
+/* ---- CUSTOM MODAL BACKDROP ---- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-panel {
+  background: var(--bg-raised);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  max-width: 420px;
+  width: 100%;
+  margin: 1rem;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+}
+
+/* ---- DRAWER SLIDE-IN ---- */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
