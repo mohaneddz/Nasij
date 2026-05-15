@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#272a2c",
+                    "outline-variant": "#46464d",
+                    "surface-bright": "#363a3b",
+                    "secondary-container": "#763305",
+                    "on-tertiary": "#23304e",
+                    "surface-container-lowest": "#0b0f10",
+                    "on-surface": "#e0e3e5",
+                    "on-secondary-container": "#fc9e69",
+                    "outline": "#909097",
+                    "primary-container": "#0d1228",
+                    "inverse-surface": "#e0e3e5",
+                    "secondary-fixed-dim": "#ffb68f",
+                    "tertiary-fixed": "#dae2ff",
+                    "tertiary-container": "#05122f",
+                    "surface-variant": "#323537",
+                    "primary": "#c1c5e3",
+                    "on-error-container": "#ffdad6",
+                    "on-primary": "#2a2f47",
+                    "on-primary-fixed-variant": "#41455e",
+                    "tertiary": "#bac6ec",
+                    "surface-container": "#1d2022",
+                    "surface": "#101415",
+                    "secondary-fixed": "#ffdbca",
+                    "on-tertiary-fixed": "#0d1a38",
+                    "error-container": "#93000a",
+                    "on-secondary": "#542100",
+                    "surface-dim": "#101415",
+                    "on-tertiary-container": "#717da0",
+                    "on-background": "#e0e3e5",
+                    "surface-container-low": "#191c1e",
+                    "tertiary-fixed-dim": "#bac6ec",
+                    "on-primary-fixed": "#151a31",
+                    "background": "#101415",
+                    "on-primary-container": "#787d98",
+                    "on-error": "#690005",
+                    "error": "#ffb4ab",
+                    "on-surface-variant": "#c7c5ce",
+                    "on-secondary-fixed-variant": "#763305",
+                    "primary-fixed-dim": "#c1c5e3",
+                    "inverse-on-surface": "#2d3133",
+                    "on-secondary-fixed": "#331100",
+                    "on-tertiary-fixed-variant": "#3a4666",
+                    "surface-tint": "#c1c5e3",
+                    "surface-container-highest": "#323537",
+                    "primary-fixed": "#dde1ff",
+                    "inverse-primary": "#585d77",
+                    "secondary": "#ffb68f",
+                    "primary-orange": "#F97316"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "24px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "section-gap": "80px",
+                    "stack-lg": "48px",
+                    "container-margin": "48px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Manrope"],
+                    "body-sm": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "h3": ["Manrope"],
+                    "h2": ["Manrope"],
+                    "h1": ["Manrope"],
+                    "button": ["Manrope"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "300"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "300"}],
+                    "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "300"}],
+                    "button": ["15px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-[#0D1228] font-body-md text-on-surface min-h-screen pb-32">
+<!-- TopAppBar (Matched to SCREEN_42) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#0D1228]/80 backdrop-blur-xl border-b border-white/10 shadow-none">
+<div class="flex-1"></div>
+<span class="text-2xl font-black text-white tracking-[0.2em] font-['Manrope']">NASSAJ</span>
+<div class="flex-1 flex justify-end">
+<button class="hover:bg-white/5 transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined text-white" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-4xl mx-auto space-y-stack-md">
+<!-- Page Header -->
+<div class="flex flex-col gap-2 mb-stack-lg">
+<h2 class="font-h1 text-h1 text-white">Prioritized Orders</h2>
+<p class="font-body-lg text-body-lg text-white/60">Manage pending collection requests across the industrial sectors.</p>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-3 overflow-x-auto pb-4 no-scrollbar">
+<span class="bg-[#F97316] text-white px-5 py-2 rounded-full font-label-caps text-[11px] cursor-pointer shadow-lg shadow-[#F97316]/20">ALL ORDERS</span>
+<span class="glass-card text-white/60 px-5 py-2 rounded-full font-label-caps text-[11px] cursor-pointer hover:text-white transition-colors">PENDING</span>
+<span class="glass-card text-white/60 px-5 py-2 rounded-full font-label-caps text-[11px] cursor-pointer hover:text-white transition-colors">ASSIGNED</span>
+</div>
+<!-- Orders List -->
+<div class="grid gap-stack-md">
+<!-- URGENT Card 1 -->
+<div class="glass-card rounded-2xl p-stack-md flex flex-col md:flex-row justify-between items-start md:items-center gap-gutter">
+<div class="space-y-4 flex-1">
+<div class="flex flex-wrap gap-2">
+<span class="bg-[#F97316]/10 text-[#F97316] border border-[#F97316]/20 px-3 py-1 rounded-lg font-label-caps text-[10px] uppercase">PENDING</span>
+<span class="bg-red-500/10 text-red-500 border border-red-500/20 px-3 py-1 rounded-lg font-label-caps text-[10px] uppercase">URGENT SKIN-ON</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-white">Industrial Zone B-4</h3>
+<p class="font-body-sm text-body-sm text-white/50 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="location_on">location_on</span>
+                            0.8km away • High Priority Hub
+                        </p>
+</div>
+<div class="flex items-center gap-2 text-red-500 font-bold tracking-tight">
+<span class="material-symbols-outlined text-[18px]" data-icon="timer">timer</span>
+<span class="font-label-caps text-[12px]">00:42:15 PICKUP DEADLINE</span>
+</div>
+</div>
+<div class="w-full md:w-auto">
+<button class="w-full md:w-auto bg-[#F97316] text-white font-button text-sm px-10 py-4 rounded-xl hover:brightness-110 transition-all active:scale-95 shadow-lg shadow-[#F97316]/20">Accept</button>
+</div>
+</div>
+<!-- Assigned Card 2 -->
+<div class="glass-card rounded-2xl p-stack-md flex flex-col md:flex-row justify-between items-start md:items-center gap-gutter">
+<div class="space-y-4 flex-1">
+<div class="flex flex-wrap gap-2">
+<span class="bg-white/5 text-white/40 border border-white/10 px-3 py-1 rounded-lg font-label-caps text-[10px] uppercase">ASSIGNED</span>
+<span class="bg-white/5 text-white/40 border border-white/10 px-3 py-1 rounded-lg font-label-caps text-[10px] uppercase">WOOL ONLY</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-white">District 7 Warehouse</h3>
+<p class="font-body-sm text-body-sm text-white/50 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="location_on">location_on</span>
+                            2.4km away • Northern Perimeter
+                        </p>
+</div>
+</div>
+<div class="w-full md:w-auto">
+<button class="w-full md:w-auto glass-card text-white font-button text-sm px-10 py-4 rounded-xl hover:bg-white/5 transition-all active:scale-95">Details</button>
+</div>
+</div>
+<!-- URGENT Card 3 -->
+<div class="glass-card rounded-2xl p-stack-md flex flex-col md:flex-row justify-between items-start md:items-center gap-gutter">
+<div class="space-y-4 flex-1">
+<div class="flex flex-wrap gap-2">
+<span class="bg-[#F97316]/10 text-[#F97316] border border-[#F97316]/20 px-3 py-1 rounded-lg font-label-caps text-[10px] uppercase">PENDING</span>
+<span class="bg-red-500/10 text-red-500 border border-red-500/20 px-3 py-1 rounded-lg font-label-caps text-[10px] uppercase">URGENT SKIN-ON</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-white">Factory Row 12</h3>
+<p class="font-body-sm text-body-sm text-white/50 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="location_on">location_on</span>
+                            1.1km away • Central Processing
+                        </p>
+</div>
+<div class="flex items-center gap-2 text-red-500 font-bold tracking-tight">
+<span class="material-symbols-outlined text-[18px]" data-icon="timer">timer</span>
+<span class="font-label-caps text-[12px]">01:05:33 PICKUP DEADLINE</span>
+</div>
+</div>
+<div class="w-full md:w-auto">
+<button class="w-full md:w-auto bg-[#F97316] text-white font-button text-sm px-10 py-4 rounded-xl hover:brightness-110 transition-all active:scale-95 shadow-lg shadow-[#F97316]/20">Accept</button>
+</div>
+</div>
+<!-- Pending Card 4 -->
+<div class="glass-card rounded-2xl p-stack-md flex flex-col md:flex-row justify-between items-start md:items-center gap-gutter">
+<div class="space-y-4 flex-1">
+<div class="flex flex-wrap gap-2">
+<span class="bg-[#F97316]/10 text-[#F97316] border border-[#F97316]/20 px-3 py-1 rounded-lg font-label-caps text-[10px] uppercase">PENDING</span>
+<span class="bg-white/5 text-white/40 border border-white/10 px-3 py-1 rounded-lg font-label-caps text-[10px] uppercase">WOOL ONLY</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-white">East Dock Landing</h3>
+<p class="font-body-sm text-body-sm text-white/50 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="location_on">location_on</span>
+                            4.5km away • Maritime Export Zone
+                        </p>
+</div>
+</div>
+<div class="w-full md:w-auto">
+<button class="w-full md:w-auto bg-[#F97316] text-white font-button text-sm px-10 py-4 rounded-xl hover:brightness-110 transition-all active:scale-95 shadow-lg shadow-[#F97316]/20">Accept</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Matched to SCREEN_42) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#0D1228]/90 backdrop-blur-2xl rounded-t-xl border-t border-white/10 shadow-[0_-4px_20px_rgba(0,0,0,0.4)]">
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white/90 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-wider mt-1">Map</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#F97316] bg-[#F97316]/10 rounded-xl px-4 py-1 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="format_list_bulleted" data-weight="fill" style="font-variation-settings: 'FILL' 1;">format_list_bulleted</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-wider mt-1">List</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white/90 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-wider mt-1">My Loads</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white/90 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-wider mt-1">History</span>
+</a>
+</nav>
+</body></html>

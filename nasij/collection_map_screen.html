@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface-variant": "#c7c5ce",
+            "surface-container": "#1d2022",
+            "surface-tint": "#c1c5e3",
+            "tertiary-container": "#05122f",
+            "tertiary-fixed": "#dae2ff",
+            "primary-fixed-dim": "#c1c5e3",
+            "on-primary-container": "#787d98",
+            "tertiary": "#bac6ec",
+            "on-error": "#690005",
+            "on-surface": "#e0e3e5",
+            "outline": "#909097",
+            "on-tertiary-fixed": "#0d1a38",
+            "on-primary-fixed-variant": "#41455e",
+            "on-primary-fixed": "#151a31",
+            "surface-container-highest": "#323537",
+            "inverse-on-surface": "#2d3133",
+            "primary": "#c1c5e3",
+            "secondary": "#ffb68f",
+            "on-secondary": "#542100",
+            "on-tertiary-fixed-variant": "#3a4666",
+            "surface-variant": "#323537",
+            "on-tertiary-container": "#717da0",
+            "secondary-fixed-dim": "#ffb68f",
+            "secondary-container": "#763305",
+            "outline-variant": "#46464d",
+            "on-secondary-fixed-variant": "#763305",
+            "inverse-surface": "#e0e3e5",
+            "primary-container": "#0d1228",
+            "inverse-primary": "#585d77",
+            "on-secondary-fixed": "#331100",
+            "primary-fixed": "#dde1ff",
+            "error-container": "#93000a",
+            "error": "#ffb4ab",
+            "on-background": "#e0e3e5",
+            "surface-container-low": "#191c1e",
+            "on-secondary-container": "#fc9e69",
+            "surface-dim": "#101415",
+            "surface-bright": "#363a3b",
+            "surface-container-lowest": "#0b0f10",
+            "on-tertiary": "#23304e",
+            "on-primary": "#2a2f47",
+            "background": "#101415",
+            "tertiary-fixed-dim": "#bac6ec",
+            "surface": "#101415",
+            "on-error-container": "#ffdad6",
+            "surface-container-high": "#272a2c",
+            "secondary-fixed": "#ffdbca",
+            "primary-orange": "#F97316"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "stack-md": "24px",
+            "section-gap": "80px",
+            "gutter": "24px",
+            "stack-lg": "48px",
+            "stack-sm": "12px",
+            "container-margin": "48px",
+            "base": "8px"
+          },
+          "fontFamily": {
+            "h2": ["Manrope"],
+            "h1": ["Manrope"],
+            "body-sm": ["Manrope"],
+            "label-caps": ["Manrope"],
+            "body-md": ["Manrope"],
+            "button": ["Manrope"],
+            "h3": ["Manrope"],
+            "body-lg": ["Manrope"]
+          },
+          "fontSize": {
+            "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "300"}],
+            "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "300"}],
+            "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+            "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "button": ["15px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "500"}],
+            "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "300"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .glass-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .map-container {
+      background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+    .pulse-red {
+      box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-[#0D1228] text-on-surface font-body-md overflow-hidden h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-center items-center px-6 h-16 bg-[#0D1228]/80 dark:bg-[#0D1228]/80 backdrop-blur-xl border-b border-white/10 shadow-none">
+<span class="text-2xl font-black text-white tracking-[0.2em] font-['Manrope']">NASSAJ</span>
+</header>
+<!-- Main Canvas (Map View) -->
+<main class="flex-grow relative mt-16 pb-24 overflow-hidden">
+<!-- Map Background Simulation -->
+<div class="absolute inset-0 bg-[#0D1228] map-container" data-location="Riyadh">
+<img alt="Dark satellite map view" class="w-full h-full object-cover opacity-40 mix-blend-luminosity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHr7tUcKqbDM--16jPHHmS3v3kDcftwxOjk2koVbZ3piyDMo6ki0JcW2Lxu_djFEqQs35qlTMfI6pR2_X10nXFgNxopC37ZWjXowtMIvMB8KUP5huTouHMNV3lOOdagEUDet5UEyq_B0h-kYNVaZ81y2WwRQFAmyj8Wk0v1vuNu4o3DG8_Y1iR-HNloyB5XpWNCKuT3obpQXHS0mTE_NXpjpty_m3-PbVdWSvNjoLeR8gkh5s9ZIcbRCIa0j5OgOb9PIWpeOm_JRE"/>
+<!-- Interactive Pins -->
+<!-- Regular Pin -->
+<div class="absolute top-1/4 left-1/3 group cursor-pointer">
+<div class="glass-card p-3 rounded-xl flex items-center gap-3 active:scale-95 transition-transform">
+<div class="w-10 h-10 rounded-lg bg-[#F97316]/20 flex items-center justify-center text-[#F97316]">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+</div>
+<div>
+<p class="font-label-caps text-white">#REQ-882</p>
+<p class="text-[10px] text-white/50">2.4 KM AWAY</p>
+</div>
+</div>
+<div class="w-1 h-8 bg-[#F97316]/50 mx-auto"></div>
+<div class="w-3 h-3 bg-[#F97316] rounded-full mx-auto shadow-[0_0_15px_rgba(249,115,22,0.5)]"></div>
+</div>
+<!-- Urgent Pin -->
+<div class="absolute top-1/2 left-2/3 group cursor-pointer">
+<div class="glass-card p-3 rounded-xl flex items-center gap-3 border-red-500/30 active:scale-95 transition-transform">
+<div class="w-10 h-10 rounded-lg bg-red-500/20 flex items-center justify-center text-red-500">
+<span class="material-symbols-outlined" data-icon="warning" data-weight="fill" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div>
+<p class="font-label-caps text-red-500">URGENT SKIN-ON</p>
+<p class="text-[10px] text-white/50">AL-MALAZ DISTRICT</p>
+</div>
+</div>
+<div class="w-1 h-8 bg-red-500/50 mx-auto"></div>
+<div class="w-4 h-4 bg-red-500 rounded-full mx-auto pulse-red"></div>
+</div>
+<!-- Secondary Pin -->
+<div class="absolute bottom-1/3 left-1/4 group cursor-pointer">
+<div class="glass-card p-3 rounded-xl flex items-center gap-3 active:scale-95 transition-transform">
+<div class="w-10 h-10 rounded-lg bg-[#F97316]/20 flex items-center justify-center text-[#F97316]">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+</div>
+<div>
+<p class="font-label-caps text-white">#REQ-901</p>
+<p class="text-[10px] text-white/50">4.1 KM AWAY</p>
+</div>
+</div>
+<div class="w-1 h-8 bg-[#F97316]/50 mx-auto"></div>
+<div class="w-3 h-3 bg-[#F97316] rounded-full mx-auto shadow-[0_0_15px_rgba(249,115,22,0.5)]"></div>
+</div>
+</div>
+<!-- UI Overlay Elements -->
+<div class="absolute top-6 left-6 right-6 flex flex-col gap-4 pointer-events-none">
+<!-- Search & Filter Row -->
+<div class="flex gap-3 pointer-events-auto">
+<div class="flex-grow glass-card h-14 rounded-2xl flex items-center px-5 gap-3">
+<span class="material-symbols-outlined text-white/40" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-white placeholder:text-white/30 w-full font-body-md" placeholder="Search butchers or locations..." type="text"/>
+</div>
+<button class="w-14 h-14 glass-card rounded-2xl flex items-center justify-center text-white active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+</div>
+<!-- View Toggle -->
+<div class="flex self-center pointer-events-auto">
+<div class="glass-card p-1.5 rounded-full flex gap-1">
+<button class="flex items-center gap-2 px-5 py-2 rounded-full bg-[#F97316] text-white font-button text-sm transition-all shadow-lg shadow-[#F97316]/20">
+<span class="material-symbols-outlined text-lg" data-icon="map" data-weight="fill" style="font-variation-settings: 'FILL' 1;">map</span>
+            Map
+          </button>
+<button class="flex items-center gap-2 px-5 py-2 rounded-full text-white/60 hover:text-white font-button text-sm transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="format_list_bulleted">format_list_bulleted</span>
+            List
+          </button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#0D1228]/90 dark:bg-[#0D1228]/90 backdrop-blur-2xl rounded-t-xl border-t border-white/10 shadow-[0_-4px_20px_rgba(0,0,0,0.4)]">
+<a class="flex flex-col items-center justify-center text-[#F97316] bg-[#F97316]/10 rounded-xl px-4 py-1 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="map" data-weight="fill" style="font-variation-settings: 'FILL' 1;">map</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-wider mt-1">Map</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white/90 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="format_list_bulleted">format_list_bulleted</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-wider mt-1">List</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white/90 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-wider mt-1">My Loads</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white/90 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-wider mt-1">History</span>
+</a>
+</nav>
+</body></html>
