@@ -1,0 +1,32 @@
+services:
+  app_db:
+    image: postgres:16-alpine
+    container_name: nfn_app_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: nfn_app
+      POSTGRES_USER: app_user
+      POSTGRES_PASSWORD: app_pass
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./sql/source_app_schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - ./sql/source_app_seed.sql:/docker-entrypoint-initdb.d/02_seed.sql:ro
+      - app_pgdata:/var/lib/postgresql/data
+
+  warehouse:
+    image: postgres:16-alpine
+    container_name: nfn_warehouse
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: nfn_wh
+      POSTGRES_USER: wh_user
+      POSTGRES_PASSWORD: wh_pass
+    ports:
+      - "5433:5432"
+    volumes:
+      - wh_pgdata:/var/lib/postgresql/data
+
+volumes:
+  app_pgdata:
+  wh_pgdata:
