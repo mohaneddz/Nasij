@@ -1,0 +1,525 @@
+{
+  "base_url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev",
+  "started_at": "20260425_023452",
+  "mux": {
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "message": "Use /<port>/<path> to route to local backend ports.",
+      "example": "/8101/health",
+      "allowed_ports": [
+        8101,
+        8102,
+        8103,
+        8104,
+        8105,
+        8106,
+        8107,
+        8108,
+        8109
+      ]
+    }
+  },
+  "checks": [
+    {
+      "name": "port_8101_health",
+      "method": "GET",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8101/health",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "status": "ok"
+      }
+    },
+    {
+      "name": "port_8102_health",
+      "method": "GET",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8102/health",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "status": "ok"
+      }
+    },
+    {
+      "name": "port_8103_health",
+      "method": "GET",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8103/health",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "status": "ok"
+      }
+    },
+    {
+      "name": "port_8104_health",
+      "method": "GET",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8104/health",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "status": "ok"
+      }
+    },
+    {
+      "name": "port_8105_health",
+      "method": "GET",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8105/health",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "status": "ok"
+      }
+    },
+    {
+      "name": "port_8106_health",
+      "method": "GET",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8106/health",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "status": "ok"
+      }
+    },
+    {
+      "name": "port_8107_health",
+      "method": "GET",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8107/health",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "status": "ok"
+      }
+    },
+    {
+      "name": "port_8108_health",
+      "method": "GET",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8108/health",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "status": "ok"
+      }
+    },
+    {
+      "name": "port_8109_health",
+      "method": "GET",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8109/health",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "status": "ok"
+      }
+    },
+    {
+      "name": "traceability_score",
+      "method": "POST",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8101/score",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "risk_score": 0.06,
+        "risk_badge": "Low",
+        "reasons": [
+          "No critical rule violations detected."
+        ],
+        "suggested_action": "Proceed but keep standard audit trail."
+      }
+    },
+    {
+      "name": "photo_verify",
+      "method": "POST",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8102/verify",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "is_wool": false,
+        "wool_condition": "BAD",
+        "photo_type": "wide_batch_or_blurry",
+        "confidence": 0.996,
+        "blur_score": 0.0204,
+        "brightness": 0.3413,
+        "needs_human_review": true,
+        "notes": [
+          "Photo does not appear to contain wool.",
+          "Image appears blurry; ask for a sharper close-up."
+        ]
+      }
+    },
+    {
+      "name": "translate",
+      "method": "POST",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8103/translate",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "source_lang": "en",
+        "target_lang": "fr",
+        "translated_text": "J'ai du laine propre pr\u00eate \u00e0 la prise en charge",
+        "confidence": 1.0,
+        "backend": "groq_api"
+      }
+    },
+    {
+      "name": "matching_recommend",
+      "method": "POST",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8104/recommend",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "recommendations": [
+          {
+            "actor_id": "depot_01",
+            "actor_type": "depot",
+            "name": "Depot Algiers",
+            "distance_km": 0.89,
+            "score": 0.8962,
+            "reason": "0.9 km away, reliability 0.89, quality match 1.00"
+          },
+          {
+            "actor_id": "depot_03",
+            "actor_type": "depot",
+            "name": "Depot Tizi Ouzou",
+            "distance_km": 89.16,
+            "score": 0.1038,
+            "reason": "89.2 km away, reliability 0.90, quality match 0.70"
+          },
+          {
+            "actor_id": "depot_02",
+            "actor_type": "depot",
+            "name": "Depot Oran",
+            "distance_km": 350.29,
+            "score": 0.0,
+            "reason": "350.3 km away, reliability 0.84, quality match 0.70"
+          }
+        ]
+      }
+    },
+    {
+      "name": "forecast_service_info",
+      "method": "GET",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8105/service-info",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "service": "05_forecasting_tool",
+        "data_source": "Table 28.csv (historical yearly time series)",
+        "observations": 43,
+        "first_year": 1980,
+        "last_year": 2022,
+        "columns": [
+          "year",
+          "production_million_clean_pounds",
+          "exports_million_clean_pounds"
+        ]
+      }
+    },
+    {
+      "name": "forecast_post",
+      "method": "POST",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8105/forecast",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "forecast_type": "time_series_supply_and_exports",
+        "horizon_years": 3,
+        "lookback_years": 15,
+        "last_historical_year": 2022,
+        "confidence": 0.8879,
+        "drivers": [
+          "historical production trend",
+          "historical export trend",
+          "linear time-series extrapolation"
+        ],
+        "forecast": [
+          {
+            "year": 2023,
+            "production_million_clean_pounds": 11.101,
+            "exports_million_clean_pounds": 7.394
+          },
+          {
+            "year": 2024,
+            "production_million_clean_pounds": 10.728,
+            "exports_million_clean_pounds": 7.216
+          },
+          {
+            "year": 2025,
+            "production_million_clean_pounds": 10.355,
+            "exports_million_clean_pounds": 7.038
+          }
+        ]
+      }
+    },
+    {
+      "name": "sheep_breeds",
+      "method": "GET",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8106/breeds",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "breeds": [
+          "Barbarine",
+          "Berbere",
+          "Elhamra",
+          "Ifillene",
+          "OuledDjellal",
+          "Rembi",
+          "Sidahou",
+          "Srandi"
+        ]
+      }
+    },
+    {
+      "name": "sheep_predict",
+      "method": "POST",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8106/predict-breed",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "predicted_breed": "Barbarine",
+        "confidence": 0.56278,
+        "top_k": [
+          {
+            "breed": "Barbarine",
+            "confidence": 0.56278
+          },
+          {
+            "breed": "Rembi",
+            "confidence": 0.12357
+          },
+          {
+            "breed": "Berbere",
+            "confidence": 0.08518
+          }
+        ],
+        "feature_version": "resnet18_imagenet_head_only_v1"
+      }
+    },
+    {
+      "name": "wool_classes",
+      "method": "GET",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8107/classes",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "classes": [
+          "new",
+          "slightly",
+          "moderate",
+          "bad",
+          "unusable"
+        ]
+      }
+    },
+    {
+      "name": "wool_predict",
+      "method": "POST",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8107/predict-wool",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "predicted_label": "bad",
+        "confidence": 0.36134,
+        "top_k": [
+          {
+            "label": "bad",
+            "confidence": 0.36134
+          },
+          {
+            "label": "moderate",
+            "confidence": 0.2472
+          }
+        ],
+        "feature_version": "resnet18_wool_tiles_v1"
+      }
+    },
+    {
+      "name": "wool_cv_info",
+      "method": "GET",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8108/service-info",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "service": "08_wool_cv",
+        "task": "skin_health_cv_tiling_and_resnet_artifacts",
+        "artifacts_present": {
+          "model_weights": true,
+          "model_config": true,
+          "training_report": true,
+          "dataset_manifest": true
+        },
+        "model_config": {
+          "architecture": "resnet18",
+          "input_size": 224,
+          "mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "std": [
+            0.229,
+            0.224,
+            0.225
+          ],
+          "classes": [
+            "flux1",
+            "flux2",
+            "flux3"
+          ],
+          "feature_version": "resnet18_flux_tiles_v2_cv_grid"
+        },
+        "metrics": {
+          "accuracy": 0.7333333333333333,
+          "train_rows": 60,
+          "test_rows": 15,
+          "num_classes": 3
+        },
+        "tiles": {
+          "flux1": 25,
+          "flux2": 25,
+          "flux3": 25,
+          "grid_size": 5,
+          "grid_method": "cv_seam_detection_v1",
+          "detection": {
+            "flux1.png": {
+              "method": "cv_seam_detection_v1",
+              "grid_size": 5,
+              "x_shift_px": [
+                -7,
+                -7,
+                2,
+                15
+              ],
+              "y_shift_px": [
+                -15,
+                -4,
+                2,
+                13
+              ]
+            },
+            "flux2.png": {
+              "method": "cv_seam_detection_v1",
+              "grid_size": 5,
+              "x_shift_px": [
+                -14,
+                -7,
+                6,
+                14
+              ],
+              "y_shift_px": [
+                -19,
+                -8,
+                2,
+                13
+              ]
+            },
+            "flux3.png": {
+              "method": "cv_seam_detection_v1",
+              "grid_size": 5,
+              "x_shift_px": [
+                -19,
+                -4,
+                7,
+                17
+              ],
+              "y_shift_px": [
+                -17,
+                -8,
+                6,
+                14
+              ]
+            }
+          },
+          "source_images": 3,
+          "total_tiles": 75
+        }
+      }
+    },
+    {
+      "name": "wool_ml_info",
+      "method": "GET",
+      "url": "https://appulsively-nonepisodical-vennie.ngrok-free.dev/8109/dataset-info",
+      "status": 200,
+      "ok": true,
+      "detail": null,
+      "body": {
+        "service": "09_wool_ml",
+        "dataset_path": "D:\\Programming\\Web\\Hackathons\\AUP\\backend\\09_wool_ml\\wool_flux_dataset_10k_attributes_only.csv",
+        "exists": true,
+        "rows": 10000,
+        "columns": 44,
+        "column_names": [
+          "sample_id",
+          "class_id",
+          "class_name",
+          "difficulty_zone",
+          "is_borderline",
+          "route_score_flux2",
+          "route_confidence_0_1",
+          "source_type",
+          "extraction_method",
+          "fiber_length_mm",
+          "vm_pct",
+          "humidity_pct",
+          "impurity_pct",
+          "whiteness_index",
+          "odor_score",
+          "jarre_pct",
+          "skin_residue_pct",
+          "blood_trace_score",
+          "grease_score",
+          "yellowness_index",
+          "color_category",
+          "pile_temperature_c",
+          "raw_weight_kg",
+          "expected_yield_pct",
+          "washed_net_weight_kg",
+          "cleanliness_score_1_5",
+          "quality_score_1_5",
+          "destination_recommendation",
+          "decision_reason",
+          "lighting_condition",
+          "environment",
+          "background_type",
+          "camera_zoom",
+          "shot_angle",
+          "shadow_intensity_0_1",
+          "blur_level_0_1",
+          "brightness_delta",
+          "contrast_delta",
+          "rotation_deg",
+          "crop_pct",
+          "occlusion_pct",
+          "image_quality_score_1_100",
+          "augmentation_chain",
+          "split"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "total_checks": 21,
+    "passed": 21,
+    "failed": 0
+  }
+}

@@ -1,0 +1,11 @@
+[
+  "mismatch_collected_vs_announced",
+  "loss_collected_to_received",
+  "loss_received_to_washed",
+  "loss_washed_to_transformed",
+  "loss_transformed_to_sold",
+  "edit_count",
+  "missing_photo",
+  "missing_location",
+  "actor_history_risk"
+]

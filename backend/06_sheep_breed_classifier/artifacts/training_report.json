@@ -1,0 +1,74 @@
+{
+  "metrics": {
+    "accuracy": 0.75,
+    "train_rows": 96,
+    "test_rows": 32,
+    "num_classes": 8,
+    "old_vit_best_test_accuracy": 0.8,
+    "new_resnet_test_accuracy": 0.75,
+    "accuracy_change_resnet_minus_vit": -0.050000000000000044
+  },
+  "classification_report": {
+    "Barbarine": {
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1-score": 0.6666666666666666,
+      "support": 4.0
+    },
+    "Berbere": {
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1-score": 0.4444444444444444,
+      "support": 4.0
+    },
+    "Elhamra": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1-score": 0.4,
+      "support": 4.0
+    },
+    "Ifillene": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1-score": 0.8571428571428571,
+      "support": 4.0
+    },
+    "OuledDjellal": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1-score": 0.8571428571428571,
+      "support": 4.0
+    },
+    "Rembi": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1-score": 0.8,
+      "support": 4.0
+    },
+    "Sidahou": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "Srandi": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1-score": 0.8888888888888888,
+      "support": 4.0
+    },
+    "accuracy": 0.75,
+    "macro avg": {
+      "precision": 0.8083333333333333,
+      "recall": 0.75,
+      "f1-score": 0.7392857142857143,
+      "support": 32.0
+    },
+    "weighted avg": {
+      "precision": 0.8083333333333333,
+      "recall": 0.75,
+      "f1-score": 0.7392857142857143,
+      "support": 32.0
+    }
+  }
+}

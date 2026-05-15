@@ -1,0 +1,48 @@
+{
+  "best_model_name": "xgboost",
+  "selection_metric": "macro_f1",
+  "classes": [
+    "new",
+    "slightly",
+    "moderate",
+    "bad",
+    "unusable"
+  ],
+  "feature_version": "wool_booster_features_v1",
+  "feature_order": [
+    "brightness_mean",
+    "brightness_std",
+    "saturation_mean",
+    "saturation_std",
+    "edge_density",
+    "entropy",
+    "color_variance",
+    "r_mean",
+    "g_mean",
+    "b_mean",
+    "r_std",
+    "g_std",
+    "b_std",
+    "high_sat_ratio",
+    "dark_ratio",
+    "bright_ratio"
+  ],
+  "candidates": {
+    "xgboost": {
+      "macro_f1": 0.8336363636363636,
+      "accuracy": 0.84
+    },
+    "lightgbm": {
+      "macro_f1": 0.7456643356643357,
+      "accuracy": 0.76
+    },
+    "hist_gradient_boosting": {
+      "macro_f1": 0.6294372294372295,
+      "accuracy": 0.64
+    },
+    "gradient_boosting": {
+      "macro_f1": 0.7072727272727273,
+      "accuracy": 0.72
+    }
+  }
+}

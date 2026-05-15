@@ -1,0 +1,20 @@
+{
+  "source_dir": "D:\\Programming\\Web\\Hackathons\\AUP\\backend\\11_wool_classifier\\wool",
+  "processed_dir": "D:\\Programming\\Web\\Hackathons\\AUP\\backend\\12_wool_booster_classifier\\data\\processed",
+  "classes": [
+    "new",
+    "slightly",
+    "moderate",
+    "bad",
+    "unusable"
+  ],
+  "tiles": {
+    "new": 25,
+    "slightly": 25,
+    "moderate": 25,
+    "bad": 25,
+    "unusable": 25,
+    "source_images": 5,
+    "skipped_images": 0
+  }
+}

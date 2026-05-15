@@ -1,0 +1,104 @@
+{
+  "source_dir": "D:\\Programming\\Web\\Hackathons\\AUP\\backend\\07_wool_on_skin_classifier\\wool",
+  "processed_dir": "D:\\Programming\\Web\\Hackathons\\AUP\\backend\\07_wool_on_skin_classifier\\data\\processed",
+  "classes": [
+    "new",
+    "slightly",
+    "moderate",
+    "bad",
+    "unusable"
+  ],
+  "tiles": {
+    "new": 25,
+    "slightly": 25,
+    "moderate": 25,
+    "bad": 25,
+    "unusable": 25,
+    "source_images": 5,
+    "skipped_images": 0,
+    "grid_size": 5,
+    "grid_method": "cv_seam_detection_v1",
+    "detection": {
+      "bad.png": {
+        "method": "cv_seam_detection_v1",
+        "grid_size": 5,
+        "x_shift_px": [
+          -13,
+          -4,
+          4,
+          9
+        ],
+        "y_shift_px": [
+          -21,
+          -11,
+          -3,
+          6
+        ]
+      },
+      "moderate.png": {
+        "method": "cv_seam_detection_v1",
+        "grid_size": 5,
+        "x_shift_px": [
+          -12,
+          -3,
+          6,
+          14
+        ],
+        "y_shift_px": [
+          -20,
+          -10,
+          0,
+          9
+        ]
+      },
+      "new.png": {
+        "method": "cv_seam_detection_v1",
+        "grid_size": 5,
+        "x_shift_px": [
+          -17,
+          -4,
+          5,
+          11
+        ],
+        "y_shift_px": [
+          -15,
+          -5,
+          6,
+          14
+        ]
+      },
+      "slightly.png": {
+        "method": "cv_seam_detection_v1",
+        "grid_size": 5,
+        "x_shift_px": [
+          -13,
+          -4,
+          5,
+          13
+        ],
+        "y_shift_px": [
+          -17,
+          -8,
+          4,
+          12
+        ]
+      },
+      "unusable.png": {
+        "method": "cv_seam_detection_v1",
+        "grid_size": 5,
+        "x_shift_px": [
+          -14,
+          -4,
+          0,
+          9
+        ],
+        "y_shift_px": [
+          -21,
+          -11,
+          -2,
+          11
+        ]
+      }
+    }
+  }
+}

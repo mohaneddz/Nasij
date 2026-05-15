@@ -1,0 +1,41 @@
+{
+  "metrics": {
+    "accuracy": 0.7333333333333333,
+    "train_rows": 60,
+    "test_rows": 15,
+    "num_classes": 3
+  },
+  "classification_report": {
+    "flux1": {
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1-score": 0.8888888888888888,
+      "support": 5.0
+    },
+    "flux2": {
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1-score": 0.5714285714285714,
+      "support": 5.0
+    },
+    "flux3": {
+      "precision": 0.5555555555555556,
+      "recall": 1.0,
+      "f1-score": 0.7142857142857143,
+      "support": 5.0
+    },
+    "accuracy": 0.7333333333333333,
+    "macro avg": {
+      "precision": 0.8518518518518517,
+      "recall": 0.7333333333333334,
+      "f1-score": 0.7248677248677248,
+      "support": 15.0
+    },
+    "weighted avg": {
+      "precision": 0.8518518518518519,
+      "recall": 0.7333333333333333,
+      "f1-score": 0.7248677248677249,
+      "support": 15.0
+    }
+  }
+}
