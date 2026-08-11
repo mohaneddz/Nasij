@@ -22,3 +22,6 @@ telegram-bot/
 **/generated_plugins.cmake
 pubspec.lock
 nasji/backend/.env
+
+# rewrite cleanup
+plan.md
