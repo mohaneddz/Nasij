@@ -1,5 +1,5 @@
 <h1 style="font-family: Arial, sans-serif; font-size: 36px; color: #2E8B57; display: flex; align-items: center; gap: 12px; border-bottom: 3px solid #2E8B57; padding-bottom: 8px;">
-  <img src="nasij-icon.png" alt="Nasij Icon" style="height: 55px; width: 55px; object-fit: contain; border-radius: 8px;">
+  <img src="nasij/web/icons/Icon-192.png" alt="Nasij Icon" style="height: 55px; width: 55px; object-fit: contain; border-radius: 8px;">
   NASIJ - Wool Traceability and Operations Monorepo
 </h1>
 
@@ -404,13 +404,13 @@ When extending this project, the safest approach is:
 
 ## Useful Paths
 
-- [Mobile app](C:/Users/PC/Documents/code/aup/AUP-Viltrumites/nasij)
-- [Mobile backend](C:/Users/PC/Documents/code/aup/AUP-Viltrumites/nasij/backend)
-- [Dashboard frontend](C:/Users/PC/Documents/code/aup/AUP-Viltrumites/nasij-web/nfn-dashboard)
-- [Dashboard backend](C:/Users/PC/Documents/code/aup/AUP-Viltrumites/nasij-web/nfn-backend)
-- [AI services](C:/Users/PC/Documents/code/aup/AUP-Viltrumites/backend)
-- [Warehouse](C:/Users/PC/Documents/code/aup/AUP-Viltrumites/warehouse)
-- [Implementation plan](<C:/Users/PC/Documents/code/aup/AUP-Viltrumites/nasij/implementation plan.md>)
+- [Mobile app](nasij)
+- [Mobile backend](nasij/backend)
+- [Dashboard frontend](nasij-web/nfn-dashboard)
+- [Dashboard backend](nasij-web/nfn-backend)
+- [AI services](backend)
+- [Warehouse](warehouse)
+- [Implementation plan](<nasij/implementation plan.md>)
 
 ## Summary
 
