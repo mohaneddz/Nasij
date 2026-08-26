@@ -1,3 +1,5 @@
+![Nasij](screenshots/cover.avif)
+
 <h1 style="font-family: Arial, sans-serif; font-size: 36px; color: #2E8B57; display: flex; align-items: center; gap: 12px; border-bottom: 3px solid #2E8B57; padding-bottom: 8px;">
   <img src="nasij/web/icons/Icon-192.png" alt="Nasij Icon" style="height: 55px; width: 55px; object-fit: contain; border-radius: 8px;">
   NASIJ - Wool Traceability and Operations Monorepo
